@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include "BigIntegerLibrary.hh"
+using namespace std;
+
+BigInteger lychrel (BigInteger x){
+
+string y = bigIntegerToString(x);
+lychrel(y.begin(), y.end());
+BigInteger lychrel = stringToBigInteger(y);
+return lychrel;
+}
+
+int main() {
+int low,up,number,j,k,p=0;
+int l=0, n=0;
+BigInteger z,count=0, sum=0;
+
+cout << "Give me the lower bound";
+cin>>low;
+
+cout<< "Give me the upper bound";
+cin>>up;
+
+for(count=low;count<=up;count++){
+for(BigInteger i=count; i<=count;i++){
+
+z= lychrel(i); sum=y+count;}
+
+if(count==z) {
+  n=n+1;
+} else {
+  int times= 0;
+
+    BigInteger zeit = count;
+    z=lychrel(zeit);
+
+    while(zeit != z && times < 30){
+
+        zeit = zeit + z;
+        z = lychrel(zeit);
+        times=times+1;
+    }
+    if(times < 30){
+        p = p + 1;
+  } else {
+    cout << "Lychrel found " << count << endl;
+        l = l +1;
+}
+}
+}
+
+cout <<"The palindrom is: " << n <<endl;
+cout<<"Lychrel doesn't become palindrome in: "<<p<<endl;
+cout<<"The lychrel is: "<< l <<endl;
+
+return 0;
+}
